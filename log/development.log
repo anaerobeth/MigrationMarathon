@@ -1,0 +1,136 @@
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (5.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20130905185341)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (12.3ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905185341"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateBooks (20130905185341)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (11.9ms)[0m  DROP TABLE "books"
+  [1m[36mSQL (1.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130905185341'[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBooks (20130905185341)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (25.8ms)[0m  [1mCREATE TABLE "books" ("id" serial primary key, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905185341"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to AddAuthorToBooks (20130905185435)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mALTER TABLE "books" ADD COLUMN "author" character varying(255)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905185435"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAuthorToBooks (20130905185435)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (6.2ms)[0m  ALTER TABLE "books" DROP "author"
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130905185435'[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAuthorToBooks (20130905185435)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "books" ADD COLUMN "author" character varying(255)[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905185435"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFavoriteToBooks (20130905190117)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.8ms)[0m  [1mALTER TABLE "books" ADD COLUMN "favorite" boolean[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905190117"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRatingToBooks (20130905190450)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRatingToBooks (20130905190450)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "books" ADD COLUMN "rating" integer[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905190450"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddRatingToBooks (20130905190450)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (12.6ms)[0m  ALTER TABLE "books" DROP "rating"
+  [1m[36mSQL (1.9ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130905190450'[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRatingToBooks (20130905190450)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mALTER TABLE "books" ADD COLUMN "rating" integer[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905190450"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCheckouts (20130905191120)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (26.3ms)[0m  [1mCREATE TABLE "checkouts" ("id" serial primary key, "reader" character varying(255), "date" timestamp, "book_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905191120"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (4.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."title" = 'Moby Dick' AND "books"."created_at" = '2012' AND "books"."updated_at" = '2013' AND "books"."author" = 'Herman Melville' AND "books"."favorite" = 't' ORDER BY "books"."id" ASC LIMIT 1
+PG::InvalidDatetimeFormat: ERROR:  invalid input syntax for type timestamp: "2012"
+LINE 1: ...."title" = 'Moby Dick' AND "books"."created_at" = '2012' AND...
+                                                             ^
+: SELECT  "books".* FROM "books"  WHERE "books"."title" = 'Moby Dick' AND "books"."created_at" = '2012' AND "books"."updated_at" = '2013' AND "books"."author" = 'Herman Melville' AND "books"."favorite" = 't'  ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (5.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."title" = 'Moby Dick' AND "books"."created_at" = '2012,2,3' AND "books"."updated_at" = '2013,2,3' AND "books"."author" = 'Herman Melville' AND "books"."favorite" = 't' ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "books" ("author", "created_at", "favorite", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author", "Herman Melville"], ["created_at", Thu, 05 Sep 2013 00:20:12 UTC +00:00], ["favorite", true], ["title", "Moby Dick"], ["updated_at", Thu, 05 Sep 2013 00:20:13 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books" WHERE "books"."title" = 'Jude the Obscure' AND "books"."created_at" = '2002,2,3' AND "books"."updated_at" = '2010,2,3' AND "books"."author" = 'Thomas Hardy' AND "books"."favorite" = 't' ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "favorite", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author", "Thomas Hardy"], ["created_at", Thu, 05 Sep 2013 00:20:02 UTC +00:00], ["favorite", true], ["title", "Jude the Obscure"], ["updated_at", Thu, 05 Sep 2013 00:20:10 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20130905193513)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (29.4ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "description" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905193513"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBook Load (5.6ms)[0m  SELECT "books".* FROM "books" WHERE "books"."title" = 'Moby Dick' AND "books"."created_at" = '2012,2,3' AND "books"."updated_at" = '2013,2,3' AND "books"."author" = 'Herman Melville' AND "books"."favorite" = 't' ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "books" ("author", "created_at", "favorite", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author", "Herman Melville"], ["created_at", Thu, 05 Sep 2013 00:20:12 UTC +00:00], ["favorite", true], ["title", "Moby Dick"], ["updated_at", Thu, 05 Sep 2013 00:20:13 UTC +00:00]]
+  [1m[36m (106.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books" WHERE "books"."title" = 'Jude the Obscure' AND "books"."created_at" = '2002,2,3' AND "books"."updated_at" = '2010,2,3' AND "books"."author" = 'Thomas Hardy' AND "books"."favorite" = 't' ORDER BY "books"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "books" ("author", "created_at", "favorite", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author", "Thomas Hardy"], ["created_at", Thu, 05 Sep 2013 00:20:02 UTC +00:00], ["favorite", true], ["title", "Jude the Obscure"], ["updated_at", Thu, 05 Sep 2013 00:20:10 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."description" = 'adventure' AND "categories"."created_at" = '2012,2,3' AND "categories"."updated_at" = '2013,2,3' ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "categories" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 05 Sep 2013 00:20:12 UTC +00:00], ["description", "adventure"], ["updated_at", Thu, 05 Sep 2013 00:20:13 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."description" = 'drama' AND "categories"."created_at" = '2002,2,3' AND "categories"."updated_at" = '2010,2,3' ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 05 Sep 2013 00:20:02 UTC +00:00], ["description", "drama"], ["updated_at", Thu, 05 Sep 2013 00:20:10 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategorizations (20130905194620)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (39.4ms)[0m  [1mCREATE TABLE "categorizations" ("id" serial primary key, "book_id" integer, "category_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20130905194620"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
